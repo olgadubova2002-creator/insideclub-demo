@@ -21,7 +21,7 @@
 @font-face { font-family: 'Unbounded'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(assets/fonts/manrope-latin-ext.woff2) format('woff2'); unicode-range: U+20BD; }
 @font-face{font-family:'Onest';font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/onest-400-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Onest';font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/onest-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%230d1b3e%27/%3E%3Crect x=%277%27 y=%2714%27 width=%2718%27 height=%274%27 rx=%272%27 fill=%27%23ffc72c%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%23050b07%27/%3E%3Crect x=%277%27 y=%2714%27 width=%2718%27 height=%274%27 rx=%272%27 fill=%27%23c6f23c%27/%3E%3C/svg%3E">
 <link rel="stylesheet" href="vibe.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DanceSchool","name":"ИНСАЙД","description":"Школа танцев для детей и взрослых.","telephone":"+7 953 183-29-02","address":{"@type":"PostalAddress","streetAddress":"ул. Демонстрации, 28А","addressLocality":"Тула","addressCountry":"RU"}}
@@ -29,13 +29,13 @@
 <style>
   /* ---- тема: шесть цветов, два шрифта (палитра А «Мел + лайм») ---------- */
   .v-page {
-    --v-canvas: #f2f6fc; --v-surface: #ffffff;
-    --v-ink: #0d1b3e; --v-ink-soft: #4a587a;
-    --v-accent: #ffc72c; --v-accent-ink: #0d1b3e;
-    --v-accent-deep: #1a46b5;           /* мелкий акцентный текст: цены, шаги, лейблы */
+    --v-canvas: #060a07; --v-surface: #0f1712;
+    --v-ink: #eef8f1; --v-ink-soft: #a3b8aa;
+    --v-accent: #477e45; --v-accent-ink: #ffffff;
+    --v-accent-deep: #8ed393;           /* мелкий акцентный текст: цены, шаги, лейблы */
     --v-font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
     --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
-    --v-shadow-color: 13 27 62;
+    --v-shadow-color: 0 0 0;
     --v-radius: 18px;
     --v-display-weight: 600;
     --v-section: clamp(2.5rem, 5.5vw, 4.75rem);
@@ -46,7 +46,7 @@
     --v-accent-32: color-mix(in oklab, var(--v-accent) 32%, transparent);
     --v-surface-tint: color-mix(in oklab, var(--v-surface) 86%, var(--v-accent));
   }
-  html, body { background: #f2f6fc; }
+  html, body { background: #060a07; }
   .v-page .v-display { line-height: 1.04; }
   .v-page .v-display--xl { line-height: 1.02; }
   .v-page .v-lede { font-weight: 400; }
@@ -83,7 +83,7 @@
   /* ---- hero: групповая тренировка в светлом зале с зеркальной стеной ---------- */
   .hero__back img { position: absolute; max-width: none; width: 108%; height: 108%; left: -4%; top: 3%; object-fit: cover; object-position: left top; }
   .hero__col { position: absolute; inset: 0; z-index: 2; pointer-events: none;
-    background: linear-gradient(to right, rgb(242 246 252 / .94) 0%, rgb(242 246 252 / .6) 34%, transparent 54%); }
+    background: linear-gradient(to right, rgb(6 10 7 / .94) 0%, rgb(6 10 7 / .6) 34%, transparent 54%); }
   .hero__copy { bottom: clamp(4.5rem, 13vh, 9rem); max-width: min(48rem, 62vw); }
   .hero__label { display: block; margin-bottom: var(--v-4); }
   .hero__copy .v-display { font-size: clamp(2.2rem, 1.2rem + 3.2vw, 4rem); }
@@ -313,9 +313,7 @@
   }
 
   /* ---- ИНСАЙД: добавки ---- */
-  .star { color: var(--v-accent); -webkit-text-stroke: 1px var(--v-ink); }
-  .bar__mark i { background: var(--v-ink); }
-  .bar__mark i::before { width: .7em; height: .16em; background: var(--v-accent); box-shadow: none; }
+  .star { color: var(--v-accent-deep); -webkit-text-stroke: 1px var(--v-ink); }
   .turn__who { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
   .gal { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-4); margin-top: var(--v-7); }
   .gal li { display: grid; gap: var(--v-2); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
@@ -342,7 +340,7 @@
   .who label { position: relative; }
   .who input { position: absolute; opacity: 0; inset: 0; }
   .who span { display: grid; place-items: center; min-height: 48px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--v-hair-strong); font-weight: 600; font-size: var(--v-t-sm); cursor: pointer; }
-  .who input:checked + span { background: var(--v-ink); color: #fff; box-shadow: none; }
+  .who input:checked + span { background: var(--v-accent); color: #fff; box-shadow: none; }
   .who input:focus-visible + span { outline: 3px solid var(--v-accent-deep); outline-offset: 2px; }
   .fld { display: grid; gap: .35rem; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
   .fld input { min-height: 48px; padding: 0 var(--v-4); border-radius: 12px; border: 0; box-shadow: inset 0 0 0 1px var(--v-hair-strong); background: var(--v-canvas); color: var(--v-ink); font: inherit; font-size: 1rem; }
@@ -359,11 +357,49 @@
     .lead__door { display: none; }
     .gal li, .chips span, .turn__who, .lead__hint, .fld, .who legend { font-size: .95rem; }
   }
-  @media (min-width: 861px) { .hero__copy { max-width: min(42rem, 50vw); } .hero__copy .v-display { font-size: clamp(2.2rem, 1.2rem + 2.6vw, 3.6rem); } .hero__col { background: linear-gradient(to right, rgb(242 246 252 / .96) 0%, rgb(242 246 252 / .7) 38%, transparent 56%); } }
+  @media (min-width: 861px) { .hero__copy { max-width: min(42rem, 50vw); } .hero__copy .v-display { font-size: clamp(2.2rem, 1.2rem + 2.6vw, 3.6rem); } .hero__col { background: linear-gradient(to right, rgb(6 10 7 / .96) 0%, rgb(6 10 7 / .7) 38%, transparent 56%); } }
   @media (min-width: 861px) { .hero__note { bottom: auto; top: 6rem; } }
   @media (max-width: 860px) { .hero__back { height: 54%; } .hero__label { display: none; } }
   .lead__form .v-btn { background: var(--v-accent); color: var(--v-accent-ink); border: 0; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; }
   @media (max-width: 860px) { .hero__note { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: .15rem .6rem; left: var(--v-gutter); right: var(--v-gutter); bottom: 1rem; padding: .55rem .9rem; border-radius: 12px; background: rgb(255 255 255 / .92); text-align: left; } .hero__note .v-label { display: none; } }
+  .bar, .bar.is-scrolled { background: #040705; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .bar__mark img { display: block; height: 4.1rem; width: auto; margin: -.6rem 0; }
+  .bar .bar__tel { color: var(--v-ink); }
+  .bar .v-btn { background: var(--v-accent); color: #fff; }
+  .foot { align-items: center; }
+  @media (max-width: 860px) { .bar, .bar.is-scrolled { background: #050b07; } .bar__mark img { height: 3.4rem; margin: -.5rem 0; } }
+  @media (max-width: 430px) { .bar__mark img { height: 3rem; } }
+  /* тёмная тема: белые и зелёные круги как на экране сцены */
+  .hero__logo { display: block; height: clamp(7rem, 17vh, 11rem); width: auto; margin: 0 0 var(--v-4) -.4rem; }
+  .sec-dots { position: relative; overflow: hidden; isolation: isolate; }
+  .sec-dots > * { position: relative; z-index: 1; }
+  .sec-dots::before, .sec-dots::after { content: ""; position: absolute; z-index: 0; pointer-events: none; border-radius: 50%; }
+  .sec-dots::before { width: clamp(9rem, 20vw, 17rem); aspect-ratio: 1; right: -4rem; top: 2.5rem; background: #477e45; opacity: .9; box-shadow: -7rem 9rem 0 -3.2rem rgb(214 238 226 / .85), -16rem 4rem 0 -5rem #1c9a55; }
+  .sec-dots::after { width: clamp(4rem, 8vw, 7rem); aspect-ratio: 1; left: -2rem; bottom: 3rem; background: rgb(178 205 192 / .55); box-shadow: 5rem -3rem 0 -1.6rem #477e45, 11rem 1rem 0 -2.4rem rgb(238 248 241 / .9); }
+  #pervaya::before, #otzyvy::before, #zayavka::before { right: auto; left: -5rem; top: auto; bottom: 2rem; background: rgb(178 205 192 / .5); box-shadow: 8rem -6rem 0 -2.6rem #1c9a55; }
+  #pervaya::after, #otzyvy::after, #zayavka::after { left: auto; right: 3rem; bottom: auto; top: 3rem; background: #477e45; box-shadow: -6rem 5rem 0 -1.4rem rgb(238 248 241 / .9); }
+  .close { position: relative; }
+  .close__fig { box-shadow: 0 0 0 1px rgb(238 248 241 / .15), 0 30px 80px rgb(0 0 0 / .6); }
+  .hero__note { background: rgb(15 23 18 / .86); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+  @media (max-width: 860px) { .hero__note { background: rgb(15 23 18 / .92); } .hero__logo { height: 5.5rem; } .sec-dots::before { opacity: .55; } }
+  .hero__copy img.hero__logo { width: auto; max-width: none; height: clamp(6.5rem, 16vh, 10rem); }
+  @media (max-width: 860px) { .hero__copy img.hero__logo { height: 5rem; } }
+  .sched { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--v-4); margin-top: var(--v-4); }
+  .sched--b { grid-template-columns: repeat(4, 1fr); }
+  .sched__day { padding: var(--v-4); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e2), var(--v-edge); display: grid; gap: var(--v-3); align-content: start; }
+  .sched__day h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-base); color: var(--v-accent-deep); }
+  .sched__hall b { display: block; font-size: var(--v-t-sm); font-weight: 600; color: var(--v-ink-soft); margin-bottom: .35rem; }
+  .sched ul { display: grid; gap: .3rem; }
+  .sched li { display: grid; grid-template-columns: 3.4em 1fr; gap: .5em; font-size: var(--v-t-sm); line-height: 1.3; }
+  .sched time { font-variant-numeric: tabular-nums; color: var(--v-ink-soft); }
+  .sched li i { font-style: normal; color: var(--v-accent-deep); font-weight: 600; white-space: nowrap; }
+  .sched__where { margin-top: var(--v-6); font-size: var(--v-t-base); }
+  .sched__where--b { margin-top: var(--v-7); }
+  .sched__note { margin-top: var(--v-5); font-size: var(--v-t-sm); }
+  @media (max-width: 960px) { .sched, .sched--b { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .sched, .sched--b { grid-template-columns: 1fr; } .sched li { font-size: .95rem; } }
+  .bar:not(.is-scrolled) .bar__mark { visibility: hidden; }
+  @media (max-width: 860px) { .sec-dots::after { display: none; } .sec-dots::before { opacity: .4; box-shadow: none; } }
 </style>
 </head>
 <body>
@@ -371,7 +407,7 @@
   <span data-v-progress></span>
 
   <header class="bar">
-    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>INSIDE</a>
+    <a class="bar__mark" href="#top" aria-label="ИНСАЙД - на главную"><img src="assets/logo.png" alt="ИНСАЙД. Излучай свет" width="585" height="640"></a>
     <nav class="bar__right" aria-label="Быстрые ссылки">
       <a class="bar__tel" href="tel:+79531832902">+7 (953) 183-29-02</a>
       <a class="v-btn" href="https://vk.me/insideclub" rel="noopener">Записаться на пробное</a>
@@ -381,7 +417,7 @@
   <main>
 
     <!-- 1 · УЗНАВАНИЕ -->
-    <section id="top" data-v-act="pin" data-v-span="1.5" data-v-drift="#f2f6fc" aria-label="Школа танцев ИНСАЙД в Туле">
+    <section id="top" data-v-act="pin" data-v-span="1.5" data-v-drift="#060a07" aria-label="Школа танцев ИНСАЙД в Туле">
       <div data-v-stage>
         <div class="v-layer hero__back" data-v-parallax="-0.45">
           <picture>
@@ -398,6 +434,7 @@
         </div>
 
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.9 0 0.1">
+          <img class="hero__logo" src="assets/logo.png" alt="" width="585" height="640">
           <span class="v-label hero__label">Студия ИНСАЙД, Тула</span>
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Танцы в Туле для детей и взрослых любого уровня</h1>
           <p class="v-lede">Hip-hop, K-pop, dancehall, контемп, high heels и другие направления. Занятия на ул. Демонстрации и выступления на фестивалях.</p>
@@ -410,7 +447,7 @@
     </section>
 
     <!-- 2 · ЗНАКОМО -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e7eef9" id="poka" aria-label="Страшно начинать танцевать">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#0b130e" id="poka" aria-label="Страшно начинать танцевать">
       <div class="v-wrap">
         <div class="poka__head" data-v-in data-v-stagger="70">
           <span class="v-label v-label--accent">Знакомо?</span>
@@ -435,7 +472,7 @@
     </section>
 
     <!-- 3 · КАК НАЧАТЬ -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#f2f6fc" id="pervaya" aria-label="Как записаться на пробное занятие">
+    <section class="v-section" data-v-act="flow" data-v-drift="#060a07" id="pervaya" aria-label="Как записаться на пробное занятие">
       <div class="v-wrap first">
         <figure class="first__fig" data-v-in data-v-in-self>
           <div data-v-parallax="0.3">
@@ -459,7 +496,7 @@
     </section>
 
     <!-- 4 · ФИРМЕННЫЙ ХОД: из зала на сцену -->
-    <section id="ucheniki" data-v-act="pin" data-v-span="1.6" data-v-drift="#e7eef9" aria-label="Из зала на сцену">
+    <section id="ucheniki" data-v-act="pin" data-v-span="1.6" data-v-drift="#0b130e" aria-label="Из зала на сцену">
       <div data-v-stage>
         <div class="ba">
           <div class="ba__copy">
@@ -495,7 +532,7 @@
     </section>
 
     <!-- 5 · ДОКАЗАТЕЛЬСТВО: фестивали -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f2f6fc" id="pobedy" aria-label="Выступления и фестивали">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#060a07" id="pobedy" aria-label="Выступления и фестивали">
       <div class="v-wrap">
         <div class="poka__head" data-v-in data-v-stagger="70">
           <span class="v-label v-label--accent">Выступления и фестивали</span>
@@ -523,7 +560,7 @@
     </section>
 
     <!-- 6 · ВЫБОР: направления и цены -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e7eef9" id="formaty" aria-label="Направления и цены">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#0b130e" id="formaty" aria-label="Направления и цены">
       <div class="v-wrap prices">
         <div class="v-stack" data-v-in data-v-stagger="60">
           <span class="v-label v-label--accent">Направления и цены</span>
@@ -562,8 +599,23 @@
       </div>
     </section>
 
+    <!-- 6б · РАСПИСАНИЕ -->
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#060a07" id="raspisanie" aria-label="Расписание занятий">
+      <div class="v-wrap">
+        <div class="v-stack" data-v-in data-v-stagger="60">
+          <span class="v-label v-label--accent">Расписание</span>
+          <h2 class="v-display v-display--lg">Когда занимаемся</h2>
+          <p class="v-body v-soft">Время начала занятий, зал и возраст группы. Расписание взято из ленты студии во ВКонтакте: перед первым визитом уточните свободные места по телефону.</p>
+        </div>
+        <p class="sched__where"><b>ул. Демонстрации, 28А</b> · два зала</p>
+        <div class="sched"><article class="sched__day"><h3>Понедельник</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>16:30</time><span>Диско <i>10-11</i></span></li><li><time>17:30</time><span>Хип-хоп диско <i>10-11</i></span></li><li><time>18:30</time><span>Танцопупсы <i>3-4</i></span></li><li><time>19:30</time><span>Дэнсмикс <i>25+</i></span></li><li><time>20:30</time><span>Хай хилс <i>18+</i></span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>16:30</time><span>Хип-хоп креатив <i>12-17</i></span></li><li><time>17:30</time><span>Движ <i>8-9</i></span></li><li><time>18:30</time><span>Новый набор <i>8-11</i></span></li><li><time>19:30</time><span>Импульс джаз-фанк <i>12-17</i></span></li><li><time>20:30</time><span>Экспериментал <i>18+</i></span></li></ul></div></article><article class="sched__day"><h3>Вторник</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>17:00</time><span>Хэппи-хорео <i>13-16</i></span></li><li><time>18:00</time><span>Хип-хоп <i>13-16</i></span></li><li><time>19:00</time><span>Мини <i>6-7</i></span></li><li><time>20:00</time><span>Джаз-фанк <i>16-25</i></span></li><li><time>21:00</time><span>Шоу-балет</span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>17:00</time><span>Драйв дэнсхолл <i>9-11</i></span></li><li><time>18:00</time><span>Малышарики Крю <i>5-6</i></span></li><li><time>19:00</time><span>Ритмикс <i>6-8</i></span></li><li><time>20:00</time><span>Дэнсхолл <i>18+</i></span></li></ul></div></article><article class="sched__day"><h3>Среда</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>16:30</time><span>Диско <i>10-11</i></span></li><li><time>17:30</time><span>Хип-хоп диско <i>10-11</i></span></li><li><time>18:30</time><span>Танцопупсы <i>3-4</i></span></li><li><time>19:30</time><span>Дэнсмикс <i>25+</i></span></li><li><time>20:30</time><span>Хай хилс <i>18+</i></span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>16:30</time><span>Хип-хоп креатив <i>12-17</i></span></li><li><time>17:30</time><span>Движ <i>8-9</i></span></li><li><time>18:30</time><span>Хип-хоп <i>8-9</i></span></li><li><time>19:30</time><span>Импульс джаз-фанк <i>12-17</i></span></li><li><time>20:30</time><span>Экспериментал <i>18+</i></span></li></ul></div></article><article class="sched__day"><h3>Четверг</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>16:00</time><span>Хип-хоп <i>13-16</i></span></li><li><time>17:00</time><span>Хэппи-хорео <i>13-16</i></span></li><li><time>18:00</time><span>Хип-хоп <i>6-8</i></span></li><li><time>19:00</time><span>Мини <i>6-7</i></span></li><li><time>20:00</time><span>Джаз-фанк <i>16-25</i></span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>16:00</time><span>К-поп <i>12-17</i></span></li><li><time>17:00</time><span>Новый набор <i>8-11</i></span></li><li><time>18:00</time><span>Малышарики Крю <i>5-6</i></span></li><li><time>19:00</time><span>Ритмикс <i>6-8</i></span></li><li><time>20:00</time><span>Герли хип-хоп <i>12-17</i></span></li></ul></div></article><article class="sched__day"><h3>Пятница</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>16:30</time><span>Драйв дэнсхолл <i>9-11</i></span></li><li><time>17:30</time><span>Гимнастика <i>6-8</i></span></li><li><time>18:30</time><span>Дэнсхолл <i>18+</i></span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>16:30</time><span>Гимнастика <i>9-11</i></span></li><li><time>17:30</time><span>Хип-хоп <i>8-9</i></span></li></ul></div></article><article class="sched__day"><h3>Воскресенье</h3><div class="sched__hall"><b>Зал 1</b><ul><li><time>15:30</time><span>Герли хип-хоп <i>12-17</i></span></li><li><time>16:30</time><span>Хэппи-хорео <i>13-16</i></span></li><li><time>17:30</time><span>Гимнастика <i>13-16</i></span></li></ul></div><div class="sched__hall"><b>Зал 2</b><ul><li><time>15:30</time><span>К-поп <i>12-17</i></span></li></ul></div></article></div>
+        <p class="sched__where sched__where--b"><b>Второй адрес: ул. Болдина, 126, 2 этаж (ТулГУ)</b></p>
+        <div class="sched sched--b"><article class="sched__day"><h3>Понедельник</h3><ul><li><time>16:00</time><span>Репетиция</span></li><li><time>18:30</time><span>Взрослый состав</span></li></ul></article><article class="sched__day"><h3>Вторник</h3><ul><li><time>20:00</time><span>Джаз-фанк (студия)</span></li><li><time>21:00</time><span>Шоу-балет</span></li></ul></article><article class="sched__day"><h3>Среда</h3><ul><li><time>16:00</time><span>Репетиция</span></li><li><time>17:30</time><span>Взрослый состав</span></li></ul></article><article class="sched__day"><h3>Четверг</h3><ul><li><time>20:00</time><span>Джаз-фанк (студия)</span></li></ul></article></div>
+      </div>
+    </section>
+
     <!-- 7 · ДОВЕРИЕ: кто ответит -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f2f6fc" id="trener" aria-label="С кем говорить">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#060a07" id="trener" aria-label="С кем говорить">
       <div class="v-wrap tr">
         <figure class="tr__fig" data-v-reveal="up" data-v-reveal-at="0.12 0.45">
           <img src="assets/trener.webp" alt="Педагог студии в жёлтом топе на занятии в зале" width="1000" height="1333" loading="lazy" decoding="async">
@@ -589,7 +641,7 @@
     </section>
 
     <!-- 8 · ДОВЕРИЕ: отзывы с Яндекс Карт -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e7eef9" id="otzyvy" aria-label="Отзывы с Яндекс Карт">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#0b130e" id="otzyvy" aria-label="Отзывы с Яндекс Карт">
       <div class="v-wrap reviews">
         <div class="reviews__head" data-v-in data-v-stagger="60">
           <h2 class="v-display v-display--md">Что пишут на Яндекс Картах</h2>
@@ -631,7 +683,7 @@
     </section>
 
     <!-- 9 · FAQ -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f2f6fc" id="faq" aria-label="Частые вопросы">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#060a07" id="faq" aria-label="Частые вопросы">
       <div class="v-wrap faq">
         <div class="faq__head" data-v-in data-v-stagger="60">
           <span class="v-label v-label--accent">Вопросы перед записью</span>
@@ -650,7 +702,7 @@
     </section>
 
     <!-- 10 · ЗАЯВКА -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e7eef9" id="zayavka" aria-label="Оставить заявку на пробное занятие">
+    <section class="sec-dots v-section v-section--tight" data-v-act="flow" data-v-drift="#0b130e" id="zayavka" aria-label="Оставить заявку на пробное занятие">
       <div class="v-wrap lead">
         <div class="lead__copy" data-v-in data-v-stagger="70">
           <span class="v-label v-label--accent">Заявка на пробное</span>
@@ -678,7 +730,7 @@
     </section>
 
     <!-- 11 · ДЕЙСТВИЕ -->
-    <section data-v-act="pin" data-v-span="1.1" data-v-drift="#e7eef9" id="zapis" aria-label="Записаться на пробное занятие">
+    <section data-v-act="pin" data-v-span="1.1" data-v-drift="#0b130e" id="zapis" aria-label="Записаться на пробное занятие">
       <div data-v-stage>
         <div class="close" data-v-spotlight>
           <div class="close__inner">
@@ -689,10 +741,10 @@
                 <a class="v-btn" href="https://vk.me/insideclub" rel="noopener" data-v-magnet="0.22" data-v-rise="0">Записаться на пробное</a>
                 <a class="close__tel" href="tel:+79531832902">+7 (953) 183-29-02</a>
               </div>
-              <p class="close__hint">Расписание и условия пробного пришлём в ответ на заявку.</p>
+              <p class="close__hint">Свободные места и условия пробного уточним в ответ на заявку.</p>
               <div class="close__meta">
                 <span><b>Адрес</b>Тула, ул. Демонстрации, 28А, этаж 1</span>
-                <span><b>Второй адрес</b>назовём при записи</span>
+                <span><b>Второй адрес</b>ул. Болдина, 126, 2 этаж (ТулГУ)</span>
                 <span><b>Часы</b>уточняйте по телефону</span>
                 <span><b>ВКонтакте</b>vk.com/insideclub</span>
               </div>
